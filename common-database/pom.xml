@@ -12,7 +12,7 @@
 	<groupId>rpay</groupId>
 	<artifactId>common-database</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>  
+	<packaging>jar</packaging>
 	<name>common-database</name>
 	<description>Entity types and utilities for RPay</description>
 	
