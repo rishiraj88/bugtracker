@@ -59,6 +59,9 @@ http://localhost:9002/bugs/delete/INVOICEPAY-001
 DELETE
 http://localhost:9002/bugs/deleteall
 
+PUT
+http://localhost:9002/bugs/updatedesc/INVOICEPAY-001
+
 ### Contact Points
 For any queries, feel free to utilise the contact points at:
 https://rrshops.netlify.app/
