@@ -3,7 +3,6 @@ package rpay.bug.services;
 import java.util.List;
 
 import rpay.bug.entities.Bug;
-import rpay.bug.entities.constants.BugStatus;
 
 public interface BugService {
 

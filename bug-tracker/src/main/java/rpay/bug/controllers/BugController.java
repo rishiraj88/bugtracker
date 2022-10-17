@@ -14,11 +14,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
 import rpay.bug.entities.Bug;
-import rpay.bug.entities.constants.BugStatus;
 import rpay.bug.services.BugService;
 
 @RestController
