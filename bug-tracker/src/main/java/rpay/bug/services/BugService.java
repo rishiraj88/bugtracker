@@ -16,4 +16,6 @@ public interface BugService {
 
   public Bug getBug(String code);
 
+  public Bug updateBugDescription(String code, String description);
+
 }

@@ -23,7 +23,7 @@ public class Bug {
   @Id
   private ObjectId id;
 
-  private String code; //better to generate
+  private String code;
   private String summary; //user input
   private String description; //user input
   private Priority priority = Priority.NONE;
