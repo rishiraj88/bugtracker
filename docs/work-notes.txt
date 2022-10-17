@@ -345,3 +345,24 @@ docker run -d \
 --name mongo-express500 \
 --net bugnetwork \
 mongo-express:0.54
+
+bug json:
+{
+  "code":"INVOICEPAY-001",
+  "summary": "first bug in payment by invoice",
+  "description":"bug desc",
+  "priority":"LOW",
+  "project":{
+    "name":"INVOICEPAY"
+  },
+  "reporter": {
+    "loginName": "rraj",
+    "role":"REPORTER"
+  },
+"assignee": {
+    "loginName": "mbibo",
+    "role":"DEVELOPER"
+  },
+  "type":"SOFTWARE_BUG",
+"status":"OPEN"
+}

@@ -1,4 +1,4 @@
-package rpay.bug.entities.enums;
+package rpay.bug.entities.constants;
 
 import lombok.NoArgsConstructor;
 

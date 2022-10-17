@@ -1,0 +1,19 @@
+{
+  "code":"INSTALMENTPAY-001",
+  "summary": "first bug in payment in instalments",
+  "description":"bug desc",
+  "priority":"LOW",
+  "project":{
+    "name":"INSTALMENTPAY"
+  },
+  "reporter": {
+    "loginName": "rraj",
+    "role":"REPORTER"
+  },
+"assignee": {
+    "loginName": "mbibo",
+    "role":"DEVELOPER"
+  },
+  "type":"SOFTWARE_BUG",
+"status":"OPEN"
+}
