@@ -1,6 +1,5 @@
 package rpay.bug.services;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,6 +39,13 @@ public class BugServiceImpl implements BugService {
   @Override
   public Bug getBug(String code) {
     return bugRepository.findByCode(code);
+  }
+
+  @Override
+  public Bug updateBugDescription(String code, String description) {
+    Bug bug = bugRepository.findByCode(code);
+    bug.setDescription(description);
+    return bugRepository.save(bug);
   }
   
 }

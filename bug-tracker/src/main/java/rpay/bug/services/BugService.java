@@ -3,6 +3,7 @@ package rpay.bug.services;
 import java.util.List;
 
 import rpay.bug.entities.Bug;
+import rpay.bug.entities.constants.BugStatus;
 
 public interface BugService {
 
@@ -15,5 +16,7 @@ public interface BugService {
   public void deleteAllBugs();
 
   public Bug getBug(String code);
+
+  public Bug updateBugDescription(String code, String description);
 
 }

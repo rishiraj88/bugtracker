@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,6 +18,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
 import rpay.bug.entities.Bug;
+import rpay.bug.entities.constants.BugStatus;
 import rpay.bug.services.BugService;
 
 @RestController
@@ -25,9 +27,6 @@ public class BugController {
   
   @Autowired
   BugService bugService;
-
-  @Autowired
-  private RestTemplate restTemplate;
 
   @GetMapping("")
   public ModelAndView welcome() {
@@ -66,9 +65,15 @@ public class BugController {
     return  ResponseEntity.status(HttpStatus.NO_CONTENT).build();
   }
 
-  @DeleteMapping("/deleteall") //204 no content
+  @DeleteMapping("/deleteall")
   public ResponseEntity<Void> deleteAllBugs() {
     bugService.deleteAllBugs();
+    return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+  }
+
+  @PutMapping("/updatedesc/{code}")
+  public ResponseEntity<Bug> updateBug(@PathVariable String code, @RequestBody String description) {
+    bugService.updateBugDescription(code, description);
     return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
   }
 }
