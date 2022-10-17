@@ -1,0 +1,38 @@
+[
+  {
+    "id": {
+      "timestamp": 1665964325,
+      "date": "2022-10-16T23:52:05.000+00:00"
+    },
+    "code": "INSTALMENTPAY-001",
+    "summary": "first bug in payment in instalments",
+    "description": "bug desc",
+    "priority": "LOW",
+    "project": {
+      "name": "INSTALMENTPAY",
+      "description": "Pay by Direct Debit",
+      "manager": {
+        "loginName": "jbob",
+        "role": "PROJECT_MANAGER"
+      },
+      "developers": null,
+      "bugs": null
+    },
+    "reporter": {
+      "loginName": "rraj",
+      "role": "REPORTER"
+    },
+    "assignee": {
+      "loginName": "mbibo",
+      "role": "DEVELOPER"
+    },
+    "dateCreated": "2022-10-17T01:52:05.452",
+    "dateResolved": null,
+    "dateClosed": null,
+    "type": "SOFTWARE_BUG",
+    "status": "OPEN",
+    "comments": null,
+    "workHistory": null,
+    "attachments": null
+  }
+]

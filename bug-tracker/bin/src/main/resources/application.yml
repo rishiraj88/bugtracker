@@ -8,5 +8,5 @@ spring:
       port: 27017
       database: buggu
       authentication-database: admin
-#      username: admin
-#      password: password
+      username: admin
+      password: password

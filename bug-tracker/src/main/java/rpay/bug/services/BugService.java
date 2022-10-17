@@ -8,6 +8,12 @@ public interface BugService {
 
   public List<Bug> getBugs();
 
-  public void createBug(Bug bug);
+  public Bug createBug(Bug bug);
+
+  public Bug deleteBug(String code);
+
+  public void deleteAllBugs();
+
+  public Bug getBug(String code);
 
 }
