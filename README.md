@@ -59,6 +59,9 @@ http://localhost:9002/bugs/delete/INVOICEPAY-001
 DELETE
 http://localhost:9002/bugs/deleteall
 
+### Docker Image Repository
+https://hub.docker.com/repository/docker/i50729/bug-tracker
+
 ### Contact Points
 For any queries, feel free to utilise the contact points at:
 https://rrshops.netlify.app/
