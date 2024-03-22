@@ -1,4 +1,4 @@
-package rpay.bug.entities;
+package rrpay.bug.entities;
 
 import lombok.NoArgsConstructor;
 

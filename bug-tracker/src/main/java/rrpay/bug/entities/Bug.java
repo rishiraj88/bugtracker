@@ -1,4 +1,4 @@
-package rpay.bug.entities;
+package rrpay.bug.entities;
 
 import java.nio.file.Path;
 import java.time.LocalDateTime;
@@ -11,10 +11,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import rpay.bug.entities.constants.BugStatus;
-import rpay.bug.entities.constants.BugType;
-import rpay.bug.entities.constants.Priority;
-import rpay.bug.entities.constants.Role;
+import rrpay.bug.entities.constants.BugStatus;
+import rrpay.bug.entities.constants.BugType;
+import rrpay.bug.entities.constants.Priority;
+import rrpay.bug.entities.constants.Role;
 
 @Data
 @NoArgsConstructor

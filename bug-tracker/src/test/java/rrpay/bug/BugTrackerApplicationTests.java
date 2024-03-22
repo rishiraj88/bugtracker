@@ -1,4 +1,4 @@
-package rpay.bug;
+package rrpay.bug;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.doNothing;
@@ -11,9 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
-import rpay.bug.entities.Bug;
-import rpay.bug.repositories.BugRepository;
-import rpay.bug.services.BugService;
+import rrpay.bug.entities.Bug;
+import rrpay.bug.repositories.BugRepository;
+import rrpay.bug.services.BugService;
 
 @SpringBootTest
 class BugTrackerApplicationTests {

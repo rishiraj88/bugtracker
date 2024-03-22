@@ -1,8 +1,8 @@
-package rpay.bug.repositories;
+package rrpay.bug.repositories;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import rpay.bug.entities.Bug;
+import rrpay.bug.entities.Bug;
 
 public interface BugRepository extends MongoRepository<Bug,String> {
 

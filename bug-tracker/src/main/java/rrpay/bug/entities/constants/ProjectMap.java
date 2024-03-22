@@ -1,4 +1,4 @@
-package rpay.bug.entities.constants;
+package rrpay.bug.entities.constants;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,9 +1,9 @@
-package rpay.bug.entities;
+package rrpay.bug.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import rpay.bug.entities.constants.Role;
+import rrpay.bug.entities.constants.Role;
 
 @Data
 @NoArgsConstructor

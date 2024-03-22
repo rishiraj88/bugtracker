@@ -1,8 +1,8 @@
-package rpay.bug.services;
+package rrpay.bug.services;
 
 import java.util.List;
 
-import rpay.bug.entities.Bug;
+import rrpay.bug.entities.Bug;
 
 public interface BugService {
 
