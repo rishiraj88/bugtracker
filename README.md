@@ -1,7 +1,7 @@
 # bugtracker
 A simple bug tracker to showcase the prominent capabilities of:
 - Java
-- Spring Boot
+- Spring MVC
 - Docker
 - Database engine (Data store)
 
@@ -19,6 +19,9 @@ A simple bug tracker to showcase the prominent capabilities of:
 - JUnit 5.8.2
 - Spring Framework 5.3.23
 - Spring Boot 2.7.4
+
+## Note about Major Overhaul and Bug Fixes
+Few major programming errors have been located in the code. Those are planned to fix this weekend.
 
 ## Running the Project Artifacts
 The bug tracker is a well runnable and testable Java implementation along with the instructions required for a reviewer.
