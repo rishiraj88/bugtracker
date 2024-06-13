@@ -3,9 +3,9 @@ A simple bug tracker to showcase the prominent capabilities of:
 - Java
 - Spring MVC
 - Docker
-- Database engine (Data store)
+- MongoDB: Database engine (Data store)
 
-## Features
+## Functionalities
 - Create a new bug
 - List a bug by code (business-derived identifier)
 - List all bugs
