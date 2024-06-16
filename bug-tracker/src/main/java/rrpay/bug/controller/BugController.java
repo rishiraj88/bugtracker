@@ -53,10 +53,10 @@ public class BugController {
 
     @GetMapping("/list/{code}")
     public ResponseEntity<BugDTO> getBug(@PathVariable String code) {
-        Bug bug =bugService.getBug(code);
-        if(null == bug)
+        List<Bug> bugs =bugService.getBugsByCode(code);
+        if(null == bugs || bugs.isEmpty())
             return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
-        return  new ResponseEntity<>(entityToDto(bug),HttpStatus.OK);
+        return  new ResponseEntity<>(entityToDto(bugs.get(0)),HttpStatus.OK);
     }
 
     @DeleteMapping("/delete/{code}")

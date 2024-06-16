@@ -10,11 +10,11 @@
 	</parent>
 	<groupId>rrpay</groupId>
 	<artifactId>bug-tracker</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>bug-tracker</name>
 	<description>bug tracker for internal use with confidential projects at RRPay</description>
 	<properties>
-		<java.version>22</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

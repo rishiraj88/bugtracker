@@ -6,9 +6,10 @@ spring:
     name: bug-tracker
   data:
     mongodb:
-      host: localhost
+      #host: localhost # for running bug-tracker app without its container
+      host: mongo
       port: 27017
-      database: buggu
+      database: mongo
       authentication-database: admin
       username: admin
-      password: password
+      password: pass
