@@ -1,6 +1,6 @@
 # bugtracker
 A simple bug tracker built with:
-- Java SE version 22
+- Java SE version 17
 - Spring Boot 3.2
 - JUnit 5
 - Testcontainers
@@ -16,54 +16,80 @@ A simple bug tracker built with:
 - Delete all bugs
 
 ## Developer Notes
-- Development is still on. A major has started on 16-Jun-2024.
+- Development has been done. MVP is ready. [Start date: 16-Jun-2024; Close date: 16-Jun-2024]
 - The following sections will be updated during next few days.
 
-## Running the Project Artifacts
-The bug tracker is a well runnable and testable Java implementation along with the instructions required for a reviewer.
+## Testing
 
-### Component Services
-- bug-tracker: to manage bugs for a department or a firm
-- mongo: Mongo DB to store data while the bug-tracker project is running. The data can be made persistent with container volumes.
-- mongo-express: Web UI for Mongo DB.
+### Manual Testing
 
-## Instructions for a Reviewer to Execute the Services
+#### Create a bug
+![Manual testing: Create a bug](./assets/manual-testing-_-create-bug.png)
 
-### Compile and Install Projects
-- Inside bug-tracker project directory: Run `mvn install`.
+#### List bugs
+![Manual testing: List all bugs](./assets/manual-testing-_-list-bugs.png)
 
-### Start Services
-The services should be started in the following order to ensure smooth functioning:
-- Follow the two shell commands to start mongodb and mongo-express, as listed in start.sh script file.
-- Run the bug-tracker manually with IDE or with command line (with `java` command with suitable options).
+#### Automated Testing
+- **Tests** class is written and used for test automation.
 
-### Access the Services
-Hit the following URLs with a web browser or a REST client:
 
-GET
-http://localhost:9002/bugs/list
+![Automated testing: Create a bugs](./assets/automated-testing-_-create-bug.png)
 
-GET
-http://localhost:9002/bugs
 
-POST
-http://localhost:9002/bugs/create
+- For POST request to create a bug, for example, the following JSON-formatted data can be used to formulate request body (available in repository in `docs` directory):
+<pre>{
+  "code":"INSTALMENTPAY-001",
+  "summary": "first bug in payment in instalments",
+  "description":"bug desc",
+  "priority":"LOW",
+  "project":{
+    "name":"INSTALMENTPAY"
+  },
+  "reporter": {
+    "loginName": "rraj",
+    "role":"REPORTER"
+  },
+"assignee": {
+    "loginName": "mbibo",
+    "role":"DEVELOPER"
+  },
+  "type":"SOFTWARE_BUG",
+"status":"OPEN"
+}</pre>
 
-GET
-http://localhost:9002/bugs/list/INVOICEPAY-001
+- The respective response is similar to the one shown below (available in repository in `docs` directory):
+<pre>{
+  "code": "INSTALMENTPAY-001",
+  "summary": "first bug in payment in instalments",
+  "description": "bug desc",
+  "priority": "LOW",
+  "projectDTO": {
+      "name": "DIRECTDEBITPAY",
+      "description": "Pay by Direct Debit"
+  },
+  "reporterDTO": {
+      "loginName": "rraj",
+      "role": "REPORTER"
+  },
+  "assigneeDTO": {
+      "loginName": "mbibo",
+      "role": "DEVELOPER"
+  },
+  "dateCreated": "2024-06-16T22:41:40.08377",
+  "dateResolved": null,
+  "dateClosed": null,
+  "type": "SOFTWARE_BUG",
+  "status": "OPEN",
+  "commentDTOs": null,
+  "workHistory": null,
+  "attachments": null
+}</pre>
 
-DELETE
-http://localhost:9002/bugs/delete/INVOICEPAY-001
+## Contact Pointers
+- **LinkedIn:** <https://www.linkedin.com/in/rishirajopenminds>
+- **X:** <https://twitter.com/RishiRajDevOps>
+- **Start Page:** <https://bio.link/rishiraj49de>
+- **GitHub:** <https://github.com/rishiraj88>
 
-DELETE
-http://localhost:9002/bugs/deleteall
-
-PUT
-http://localhost:9002/bugs/updatedesc/INVOICEPAY-001
-
-### Contact Points
-For any queries, feel free to utilise the contact points at:
-https://bio.link/rishiraj49de
-
-### Status and Growth Progress
-Initially developed in Sep-2022. Started to be upgraded and enhanced in Mar-2023.
+## Credits and Gratitude
+I thank all who have mentored, taught and guided me. Also, I appreciate who have supported my work with pair programming and more.
