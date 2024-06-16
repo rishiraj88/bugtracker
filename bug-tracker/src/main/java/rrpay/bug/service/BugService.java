@@ -1,6 +1,5 @@
 package rrpay.bug.service;
 
-import rrpay.bug.dto.BugDTO;
 import rrpay.bug.model.Bug;
 
 import java.util.List;

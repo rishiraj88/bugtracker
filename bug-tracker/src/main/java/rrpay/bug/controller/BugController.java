@@ -1,6 +1,7 @@
 package rrpay.bug.controller;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.ModelMap;
@@ -26,7 +27,7 @@ import java.util.List;
 @RequestMapping("/bugs")
 @RequiredArgsConstructor
 public class BugController {
-    private BugService bugService;
+    private final BugService bugService;
 
     @GetMapping("")
     public ModelAndView landingPage(ModelMap model) {

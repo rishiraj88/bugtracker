@@ -1,17 +1,14 @@
 package rrpay.bug.service;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import rrpay.bug.dto.BugDTO;
 import rrpay.bug.model.Bug;
 import rrpay.bug.repo.BugRepository;
-import rrpay.bug.util.Mapper;
-
-import static rrpay.bug.util.Mapper.*;
 
 import java.util.List;
-@Service
+@Service @RequiredArgsConstructor
 public class BugServiceImpl implements BugService {
-    private BugRepository bugRepository;
+    private final BugRepository bugRepository;
 
     @Override
     public List<Bug> getBugs() {
