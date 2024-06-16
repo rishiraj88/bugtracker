@@ -1,9 +1,12 @@
 # bugtracker
-A simple bug tracker to showcase the prominent capabilities of:
-- Java
-- Spring MVC
+A simple bug tracker built with:
+- Java SE version 22
+- Spring Boot 3.2
+- JUnit 5
+- Testcontainers
+- Rest-Assured
 - Docker
-- MongoDB: Database engine (Data store)
+- MongoDB 7: Database engine (Data store)
 
 ## Functionalities
 - Create a new bug
@@ -12,15 +15,9 @@ A simple bug tracker to showcase the prominent capabilities of:
 - Delete a bug, selected by code
 - Delete all bugs
 
-## Enviroment
-- Eclipse JEE 2022 / STS / VS Code or another modern IDE for Java Spring Boot projects
-- JAVA SE 17
-- JUnit 5.8.2
-- Spring Framework 5.3.23
-- Spring Boot 2.7.4
-
-## Note about Major Overhaul and Bug Fixes
-Few major programming errors have been located in the code. Those are planned to fix this weekend.
+## Developer Notes
+- Development is still on. A major has started on 16-Jun-2024.
+- The following sections will be updated during next few days.
 
 ## Running the Project Artifacts
 The bug tracker is a well runnable and testable Java implementation along with the instructions required for a reviewer.
