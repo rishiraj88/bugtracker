@@ -2,8 +2,6 @@ server:
   port: 9002
 
 spring:
-  application:
-    name: bug-tracker
   data:
     mongodb:
       host: localhost

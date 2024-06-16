@@ -1,29 +1,31 @@
 # bugtracker
-A simple bug tracker to show the capabilities of:
+A simple bug tracker to showcase the prominent capabilities of:
 - Java
-- Spring Boot
+- Spring MVC
 - Docker
-- Database engine (Data store)
+- MongoDB: Database engine (Data store)
 
-## Features
+## Functionalities
 - Create a new bug
 - List a bug by code (business-derived identifier)
 - List all bugs
-- Delete a bug by code
+- Delete a bug, selected by code
 - Delete all bugs
 
 ## Enviroment
------------
-Eclipse JEE 2022 / STS / VS Code or another modern IDE for Java Spring Boot projects
-JAVA SE 17
-JUnit 5.8.2
-Spring 5.3.23
-Spring 2.7.4
+- Eclipse JEE 2022 / STS / VS Code or another modern IDE for Java Spring Boot projects
+- JAVA SE 17
+- JUnit 5.8.2
+- Spring Framework 5.3.23
+- Spring Boot 2.7.4
+
+## Note about Major Overhaul and Bug Fixes
+Few major programming errors have been located in the code. Those are planned to fix this weekend.
 
 ## Running the Project Artifacts
 The bug tracker is a well runnable and testable Java implementation along with the instructions required for a reviewer.
 
-### Projects and Components
+### Component Services
 - bug-tracker: to manage bugs for a department or a firm
 - mongo: Mongo DB to store data while the bug-tracker project is running. The data can be made persistent with container volumes.
 - mongo-express: Web UI for Mongo DB.
@@ -64,4 +66,7 @@ http://localhost:9002/bugs/updatedesc/INVOICEPAY-001
 
 ### Contact Points
 For any queries, feel free to utilise the contact points at:
-https://rrshops.netlify.app/
+https://bio.link/rishiraj49de
+
+### Status and Growth Progress
+Initially developed in Sep-2022. Started to be upgraded and enhanced in Mar-2023.
