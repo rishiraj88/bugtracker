@@ -9,7 +9,7 @@ public interface BugService {
 
     public Bug createBug(Bug bug);
 
-    public Bug getBug(String code);
+    public List<Bug> getBugsByCode(String code);
 
     public void deleteBug(String code);
 

@@ -22,7 +22,7 @@ public class BugServiceImpl implements BugService {
     }
 
     @Override
-    public Bug getBug(String code) {
+    public List<Bug> getBugsByCode(String code) {
         return bugRepository.findByCode(code);
     }
 
@@ -38,7 +38,7 @@ public class BugServiceImpl implements BugService {
 
     @Override
     public void updateBugDescription(String code, String description) {
-        Bug bug = bugRepository.findByCode(code);
+        Bug bug = bugRepository.findByCode(code).get(0);
         bug.setDescription(description);
         bugRepository.save(bug);
     }
