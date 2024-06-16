@@ -13,7 +13,6 @@ A simple bug tracker to showcase the prominent capabilities of:
 - Delete all bugs
 
 ## Enviroment
------------
 - Eclipse JEE 2022 / STS / VS Code or another modern IDE for Java Spring Boot projects
 - JAVA SE 17
 - JUnit 5.8.2
@@ -70,4 +69,4 @@ For any queries, feel free to utilise the contact points at:
 https://bio.link/rishiraj49de
 
 ### Status and Growth Progress
-Initially developed in Sep-2023. Started to be upgraded and enhanced in Mar-2023.
+Initially developed in Sep-2022. Started to be upgraded and enhanced in Mar-2023.
