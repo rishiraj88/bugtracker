@@ -1,6 +1,6 @@
 # bugtracker
 A simple bug tracker built with:
-- Java SE version 17
+- Java SE version 17 (built and tested manually with Java 22 compiler also)
 - Spring Boot 3.2
 - JUnit 5
 - Testcontainers
@@ -18,6 +18,7 @@ A simple bug tracker built with:
 ## Developer Notes
 - Development has been done. MVP is ready. [Start date: 16-Jun-2024; Close date: 16-Jun-2024]
 - The following sections will be updated during next few days.
+- Due to some issues with Java 22 while running Docker container of bug tracker app, the project is currently being recompiled and exported using Java 17 compiler/linker.
 
 ## Testing
 
