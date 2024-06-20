@@ -2,7 +2,6 @@ package rrpay.bug;
 
 import io.restassured.RestAssured;
 import org.hamcrest.Matchers;
-import org.junit.Ignore;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -43,7 +42,7 @@ class BugTrackerApplicationTests {
 				  "status":"OPEN"
 				  }
 				""";
-		RestAssured.given().contentType("application/json").body(requestBody).when().post("/bugs/create").then().log().all().statusCode(201).body("code", Matchers.equalTo("INSTALMENTPAY-001")).body("summary", Matchers.equalTo("first bug in payment in instalments")).body("description", Matchers.equalTo("bug desc")).body("priority", Matchers.is("LOW"));
+		RestAssured.given().contentType("application/json").body(requestBody).when().post("/bugs/").then().log().all().statusCode(201).body("code", Matchers.equalTo("INSTALMENTPAY-001")).body("summary", Matchers.equalTo("first bug in payment in instalments")).body("description", Matchers.equalTo("bug desc")).body("priority", Matchers.is("LOW"));
 	}
 /*
 	@Test

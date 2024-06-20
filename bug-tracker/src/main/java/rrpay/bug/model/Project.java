@@ -3,6 +3,7 @@ package rrpay.bug.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.mongodb.core.mapping.Document;
 import rrpay.bug.model.enums.Role;
 import rrpay.bug.util.ProjectMap;
 
@@ -11,6 +12,7 @@ import java.util.Set;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Document(collection="project")
 public class Project {
   private String name = "DIRECTDEBITPAY"; //INVOICEPAY, INSTALMENTPAY, DIRECTDEBITPAY
   private String description ="Pay by Direct Debit"; //"Pay by Invoice", "Pay in Instalments", "Pay by Direct Debit"
