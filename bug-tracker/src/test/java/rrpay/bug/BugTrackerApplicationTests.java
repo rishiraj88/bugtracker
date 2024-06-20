@@ -2,7 +2,6 @@ package rrpay.bug;
 
 import io.restassured.RestAssured;
 import org.hamcrest.Matchers;
-import org.junit.Ignore;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

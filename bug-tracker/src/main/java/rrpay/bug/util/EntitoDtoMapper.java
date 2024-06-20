@@ -7,9 +7,7 @@ import rrpay.bug.model.Bug;
 import rrpay.bug.model.Project;
 import rrpay.bug.model.User;
 
-import java.time.LocalDateTime;
-
-public class Mapper {
+public class EntitoDtoMapper {
     public static Bug dtoToEntity(BugDTO dto) {
         Bug entity = new Bug();
         entity.setCode(dto.getCode());
