@@ -7,5 +7,4 @@ import rrpay.bug.model.User;
 public class CommentDTO {
   private String text;
   private User author;
-
 }
