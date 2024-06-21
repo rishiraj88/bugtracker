@@ -7,9 +7,12 @@ import rrpay.bug.model.Bug;
 import rrpay.bug.repo.BugRepository;
 import static rrpay.bug.util.EntitoDtoMapper.*;
 import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class BugServiceImpl implements BugService {
+    // @RequiredArgsConstructor annotation takes care of autowiring by constructor
+    // Hence no need for @Autowired annotation on the field declaration
     private final BugRepository bugRepository;
 
     @Override

@@ -6,7 +6,6 @@ import rrpay.bug.model.enums.BugStatus;
 import rrpay.bug.model.enums.BugType;
 import rrpay.bug.model.enums.Priority;
 import rrpay.bug.model.enums.Role;
-import rrpay.bug.util.ProjectMap;
 
 import java.nio.file.Path;
 import java.time.LocalDateTime;

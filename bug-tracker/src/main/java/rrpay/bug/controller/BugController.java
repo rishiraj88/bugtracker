@@ -23,6 +23,8 @@ import static rrpay.bug.util.EntitoDtoMapper.entityToDto;
 @RequestMapping("/bugs")
 @RequiredArgsConstructor
 public class BugController {
+    // @RequiredArgsConstructor annotation takes care of autowiring by constructor
+    // Hence no need for @Autowired annotation on the field declaration
     private final BugService bugService;
 
     @GetMapping("/")
@@ -65,6 +67,6 @@ public class BugController {
     @PatchMapping("/{code}")
     public ResponseEntity<Void> updateBugDescription(@PathVariable String code, @RequestBody String description){
         bugService.updateBugDescription(code,description);
-        return  ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 }

@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 import rrpay.bug.model.Bug;
 
 import java.util.List;
+
 @Repository
 public interface BugRepository extends MongoRepository<Bug,String> {
     public List<Bug> findByCode(String code);

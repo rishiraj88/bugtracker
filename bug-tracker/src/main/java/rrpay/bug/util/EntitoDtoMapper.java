@@ -34,18 +34,17 @@ public class EntitoDtoMapper {
         dto.setReporterDTO(entityToDto(entity.getReporter()));
         dto.setDateResolved(entity.getDateResolved());
         dto.setStatus(entity.getStatus());
-
         return dto;
     }
 
     public static Project dtoToEntity(ProjectDTO dto) {
-        Project  entity = new Project();
+        Project entity = new Project();
         entity.setName(dto.getName());
         entity.setDescription(dto.getDescription());
         return entity;
     }
     public static ProjectDTO entityToDto(Project entity) {
-        ProjectDTO  dto = new ProjectDTO();
+        ProjectDTO dto = new ProjectDTO();
         dto.setName(entity.getName());
         dto.setDescription(entity.getDescription());
         return dto;
