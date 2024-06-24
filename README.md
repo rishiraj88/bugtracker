@@ -17,8 +17,10 @@ A simple bug tracker built with:
 
 ## Developer Notes
 - Development has been done. MVP is ready. [Start date: 16-Jun-2024; Close date: 16-Jun-2024]
-- The following sections will be updated during next few days.
-- Due to some issues with Java 22 while running Docker container of bug tracker app, the project is currently being recompiled and exported using Java 17 compiler/linker.
+- The following sections will be updated during next few days:
+  - Due to some issues with Java 22 while running Docker container of bug tracker app, the project is currently being recompiled and exported using Java 17 compiler/linker.
+  - to implement and use Docker secrets for enhanced security
+
 
 ## Testing
 
