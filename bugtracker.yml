@@ -30,3 +30,6 @@ services:
       #- ME_CONFIG_MONGODB_SERVER=mongo
     #depends_on:
      # - mongo
+
+#to implement and use Docker secrets for enhanced security
+#to remove trivial comments
