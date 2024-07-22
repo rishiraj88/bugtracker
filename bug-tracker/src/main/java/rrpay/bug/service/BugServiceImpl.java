@@ -32,7 +32,11 @@ public class BugServiceImpl implements BugService {
     }
     @Override
     public BugDTO getOneBugByCode(String code) {
-        return entityToDto(bugRepository.findByCode(code).get(0));
+        List<Bug> bugList = bugRepository.findByCode(code);
+        if(null == bugList || bugList.isEmpty()){
+            return null;
+        }
+        return entityToDto(bugList.get(0));
     }
     @Override
     public void deleteBug(String code) {
@@ -45,9 +49,14 @@ public class BugServiceImpl implements BugService {
     }
 
     @Override
-    public void updateBugDescription(String code, String description) {
-        Bug bug = bugRepository.findByCode(code).get(0);
+    public String updateBugDescription(String code, String description) {
+        List<Bug> bugList = bugRepository.findByCode(code);
+        if(null == bugList || bugList.isEmpty()){
+            return "Update not done for reason: No matching bug found.";
+        }
+        Bug bug = bugList.get(0);
         bug.setDescription(description);
         bugRepository.save(bug);
+        return "The description of the matching bug has been updated.";
     }
 }
