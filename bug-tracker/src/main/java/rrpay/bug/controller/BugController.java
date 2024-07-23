@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 import rrpay.bug.dto.BugDTO;
 import rrpay.bug.service.BugService;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static rrpay.bug.util.EntitoDtoMapper.entityToDto;
@@ -24,6 +23,7 @@ import static rrpay.bug.util.EntitoDtoMapper.entityToDto;
 @RequiredArgsConstructor
 public class BugController {
     // @RequiredArgsConstructor annotation takes care of autowiring by constructor
+    // When @RequiredArgsConstructor is not applied, the final data members (properties) are to be initialized using a parameterized constructor.
     // Hence no need for @Autowired annotation on the field declaration
     private final BugService bugService;
 
@@ -33,9 +33,7 @@ public class BugController {
         if (null == bugs || bugs.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
         }
-        List<BugDTO> bugsResponse = new ArrayList<>();
-        bugs.forEach(bug -> bugsResponse.add(bug));
-        return new ResponseEntity<>(bugsResponse, HttpStatus.OK);
+        return new ResponseEntity<>(bugs, HttpStatus.OK);
     }
 
     @PostMapping("/")
@@ -65,8 +63,8 @@ public class BugController {
     }
 
     @PatchMapping("/{code}")
-    public ResponseEntity<Void> updateBugDescription(@PathVariable String code, @RequestBody String description){
-        bugService.updateBugDescription(code,description);
-        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    public ResponseEntity<String> updateBugDescription(@PathVariable String code, @RequestBody String description){
+        String serviceResponse = bugService.updateBugDescription(code,description);
+        return ResponseEntity.status(HttpStatus.OK).body(serviceResponse);
     }
 }

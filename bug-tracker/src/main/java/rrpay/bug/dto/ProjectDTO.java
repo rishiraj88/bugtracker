@@ -5,16 +5,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import rrpay.bug.util.ProjectMap;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class ProjectDTO {
-/*  Default project name is:
-  DIRECTDEBITPAY
-*/
-  private String name = "DIRECTDEBITPAY";
-  private String description;
-  {
+record ProjectDTO(
+    String name,
+    String description) {
+  public ProjectDTO(
+      String name,
+      String description) {
+    this.name = "DIRECTDEBITPAY";
     this.description = ProjectMap.projects.get(this.name);
   }
 }
