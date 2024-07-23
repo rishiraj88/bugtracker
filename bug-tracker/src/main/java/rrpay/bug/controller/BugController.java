@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 import rrpay.bug.dto.BugDTO;
 import rrpay.bug.service.BugService;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static rrpay.bug.util.EntitoDtoMapper.entityToDto;
