@@ -39,14 +39,13 @@ public class EntityToDtoMapper {
 
     public static Project dtoToEntity(ProjectDTO dto) {
         Project entity = new Project();
-        entity.setName(dto.getName());
-        entity.setDescription(dto.getDescription());
+        entity.setName(dto.name());
+        entity.setDescription(dto.description());
         return entity;
     }
     public static ProjectDTO entityToDto(Project entity) {
-        ProjectDTO dto = new ProjectDTO();
-        dto.setName(entity.getName());
-        dto.setDescription(entity.getDescription());
+        ProjectDTO dto = new ProjectDTO(entity.getName(),entity.getDescription());
+
         return dto;
     }
     public static User dtoToEntity(UserDTO dto) {

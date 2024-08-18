@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import rrpay.bug.dto.BugDTO;
 import rrpay.bug.model.Bug;
 import rrpay.bug.repo.BugRepository;
-import static rrpay.bug.util.EntitoDtoMapper.*;
+import static rrpay.bug.util.EntityToDtoMapper.*;
 import java.util.List;
 
 @Service
