@@ -1,16 +1,16 @@
 package rrpay.bug.dto;
 
+import java.nio.file.Path;
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Set;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import rrpay.bug.model.enums.BugStatus;
 import rrpay.bug.model.enums.BugType;
 import rrpay.bug.model.enums.Priority;
 import rrpay.bug.model.enums.Role;
-
-import java.nio.file.Path;
-import java.time.LocalDateTime;
-import java.util.List;
-import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -32,11 +32,10 @@ public class BugDTO {
   private Set<Path> attachments;
 
   {
-    projectDTO = new ProjectDTO();
+    projectDTO = new ProjectDTO(null,null);
     reporterDTO = new UserDTO("rraj", Role.REPORTER);
     assigneeDTO = new UserDTO("mbibo",Role.DEVELOPER);
     dateCreated = LocalDateTime.now();
     type = BugType.SOFTWARE_BUG;
   }
-
 }

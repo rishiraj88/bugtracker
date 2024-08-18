@@ -1,13 +1,13 @@
 package rrpay.bug.util;
 
 import rrpay.bug.dto.BugDTO;
-import rrpay.bug.dto.ProjectDTO;
 import rrpay.bug.dto.UserDTO;
 import rrpay.bug.model.Bug;
 import rrpay.bug.model.Project;
 import rrpay.bug.model.User;
+import rrpay.bug.dto.ProjectDTO;
 
-public class EntitoDtoMapper {
+public class EntityToDtoMapper {
     public static Bug dtoToEntity(BugDTO dto) {
         Bug entity = new Bug();
         entity.setCode(dto.getCode());
@@ -39,14 +39,13 @@ public class EntitoDtoMapper {
 
     public static Project dtoToEntity(ProjectDTO dto) {
         Project entity = new Project();
-        entity.setName(dto.getName());
-        entity.setDescription(dto.getDescription());
+        entity.setName(dto.name());
+        entity.setDescription(dto.description());
         return entity;
     }
     public static ProjectDTO entityToDto(Project entity) {
-        ProjectDTO dto = new ProjectDTO();
-        dto.setName(entity.getName());
-        dto.setDescription(entity.getDescription());
+        ProjectDTO dto = new ProjectDTO(entity.getName(),entity.getDescription());
+
         return dto;
     }
     public static User dtoToEntity(UserDTO dto) {

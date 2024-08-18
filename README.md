@@ -10,17 +10,17 @@ A simple bug tracker built with:
 
 ## Functionalities
 - Create a new bug
-- List a bug by code (business-derived identifier)
+- List a bug, by code (business-derived identifier)
 - List all bugs
-- Delete a bug, selected by code
+- Delete a bug, by code
 - Delete all bugs
+- (X) Update a bug. Not in plan to implement
 
 ## Developer Notes
-- Development has been done. MVP is ready.
+- Development has been done.
 - The following sections will be updated during next few days:
   - Due to some issues with Java 22 while running Docker container of bug tracker app, the project is currently being recompiled and exported using Java 17 compiler/linker.
   - to implement and use Docker secrets for enhanced security
-
 
 ## Testing
 
@@ -28,11 +28,11 @@ A simple bug tracker built with:
 
 #### Create a bug
 ![Manual testing: Create a bug](./assets/manual-testing-_-create-bug.png)
-- TODO: The above screenshot to be replaced. Planned for 08-Jul-2024.
+- TODO: The above screenshot to be replaced.
 
 #### List bugs
 ![Manual testing: List all bugs](./assets/manual-testing-_-list-bugs.png)
-- TODO: The above screenshot to be replaced. Planned for 08-Jul-2024.
+- TODO: The above screenshot to be replaced.
 
 #### Automated Testing
 - **Tests** class is written and used for test automation.
