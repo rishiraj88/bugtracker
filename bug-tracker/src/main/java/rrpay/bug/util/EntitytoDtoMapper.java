@@ -1,13 +1,13 @@
 package rrpay.bug.util;
 
 import rrpay.bug.dto.BugDTO;
-import rrpay.bug.dto.ProjectDTO;
 import rrpay.bug.dto.UserDTO;
 import rrpay.bug.model.Bug;
 import rrpay.bug.model.Project;
 import rrpay.bug.model.User;
+import rrpay.bug.dto.ProjectDTO;
 
-public class EntitoDtoMapper {
+public class EntityToDtoMapper {
     public static Bug dtoToEntity(BugDTO dto) {
         Bug entity = new Bug();
         entity.setCode(dto.getCode());

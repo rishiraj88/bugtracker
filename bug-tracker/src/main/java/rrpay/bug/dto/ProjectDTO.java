@@ -1,8 +1,5 @@
 package rrpay.bug.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import rrpay.bug.util.ProjectMap;
 
 record ProjectDTO(
@@ -11,7 +8,13 @@ record ProjectDTO(
   public ProjectDTO(
       String name,
       String description) {
-    this.name = "DIRECTDEBITPAY";
+        if(null != name || name.isEmpty())
+          this.name = name;
+        else 
+         this.name = "DIRECTDEBITPAY";
+
     this.description = ProjectMap.projects.get(this.name);
   }
+
+ 
 }
