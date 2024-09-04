@@ -1,11 +1,11 @@
 package rrpay.bug.model.enums;
 
 public enum BugStatus {
-  OPEN, IN_PROGRESS,RESOLVED,NEED_INFO,CLOSED
+  NEW,ASSIGNED,ACTIVE,TEST,VERIFIED,CLOSED,REJECTED,DEFERRED,NEED_INFO
 }
 
 /*
- * TODO: to implement a finite state machine (FSM) corresponding to this state model:-
+ * TODO: the permissible set of states for the finite state machine (FSM) of Bug:-
  * defect / bug life cycle:
  * New
  * Assigned
