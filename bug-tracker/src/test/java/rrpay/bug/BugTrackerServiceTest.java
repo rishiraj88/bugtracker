@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import rrpay.bug.dto.BugDTO;
-import rrpay.bug.model.Bug;
+import rrpay.bug.kt.model.Bug;
 import rrpay.bug.repo.BugRepository;
 import rrpay.bug.service.BugService;
 import rrpay.bug.service.BugServiceImpl;

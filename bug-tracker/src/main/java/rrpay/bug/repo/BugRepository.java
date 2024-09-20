@@ -2,7 +2,7 @@ package rrpay.bug.repo;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
-import rrpay.bug.model.Bug;
+import rrpay.bug.kt.model.Bug;
 
 import java.util.List;
 

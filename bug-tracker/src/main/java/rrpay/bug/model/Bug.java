@@ -17,7 +17,7 @@ import java.util.Set;
 @Data
 @NoArgsConstructor
 @Document(collection="bug")
-public class Bug {
+class Bug {
   @Id
   private ObjectId id;
   private String code;

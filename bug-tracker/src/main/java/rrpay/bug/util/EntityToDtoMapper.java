@@ -3,22 +3,18 @@ package rrpay.bug.util;
 import rrpay.bug.dto.BugDTO;
 import rrpay.bug.dto.ProjectDTO;
 import rrpay.bug.dto.UserDTO;
-import rrpay.bug.model.Bug;
+import rrpay.bug.kt.model.Bug;
 import rrpay.bug.model.Project;
 import rrpay.bug.model.User;
 
 public class EntityToDtoMapper {
     public static Bug dtoToEntity(BugDTO dto) {
-        Bug entity = new Bug();
+        Bug entity = new Bug(dto.getSummary(),dto.getDescription(),dto.getPriority(),dto.getStatus());
         entity.setCode(dto.getCode());
-        entity.setSummary(dto.getSummary());
-        entity.setDescription(dto.getDescription());
-        entity.setPriority(dto.getPriority());
         entity.setPriority(dto.getPriority());
         entity.setProject(dtoToEntity(dto.getProjectDTO()));
         entity.setReporter(dtoToEntity(dto.getReporterDTO()));
         entity.setDateResolved(dto.getDateResolved());
-        entity.setStatus(dto.getStatus());
         return entity;
     }
 
