@@ -6,7 +6,7 @@ import rrpay.bug.kt.model.Bug;
 
 import java.util.List;
 
-@Repository
+//@Repository
 public interface BugRepository extends MongoRepository<Bug,String> {
     public List<Bug> findByCode(String code);
 
