@@ -1,7 +1,7 @@
-package rrpay.bug.model.enums;
+package rrpay.bug.model.kt.enums
 
-public enum BugStatus {
-  NEW,ASSIGNED,ACTIVE,TEST,VERIFIED,CLOSED,REJECTED,DEFERRED,NEED_INFO
+enum class BugStatus {
+    NEW,ASSIGNED,ACTIVE,TEST,VERIFIED,CLOSED,REJECTED,DEFERRED,NEED_INFO
 }
 
 /*

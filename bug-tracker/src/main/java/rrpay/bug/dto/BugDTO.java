@@ -7,10 +7,10 @@ import java.util.Set;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import rrpay.bug.model.enums.BugStatus;
-import rrpay.bug.model.enums.BugType;
-import rrpay.bug.model.enums.Priority;
-import rrpay.bug.model.enums.Role;
+import rrpay.bug.model.kt.enums.BugStatus;
+import rrpay.bug.model.kt.enums.BugType;
+import rrpay.bug.model.kt.enums.Priority;
+import rrpay.bug.model.kt.enums.Role;
 
 @Data
 @NoArgsConstructor
@@ -26,7 +26,7 @@ public class BugDTO {
   private LocalDateTime dateResolved;
   private LocalDateTime dateClosed;
   private BugType type; //set to default value
-  private BugStatus status = BugStatus.OPEN; //default value
+  private BugStatus status = BugStatus.NEW; //default value
   private List<CommentDTO> commentDTOs;
   private List<String> workHistory;
   private Set<Path> attachments;

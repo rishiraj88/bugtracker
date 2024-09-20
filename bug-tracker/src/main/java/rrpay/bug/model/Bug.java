@@ -5,9 +5,9 @@ import lombok.NoArgsConstructor;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import rrpay.bug.model.enums.BugStatus;
-import rrpay.bug.model.enums.BugType;
-import rrpay.bug.model.enums.Priority;
+import rrpay.bug.model.kt.enums.BugStatus;
+import rrpay.bug.model.kt.enums.BugType;
+import rrpay.bug.model.kt.enums.Priority;
 
 import java.nio.file.Path;
 import java.time.LocalDateTime;
@@ -17,7 +17,7 @@ import java.util.Set;
 @Data
 @NoArgsConstructor
 @Document(collection="bug")
-public class Bug {
+class Bug {
   @Id
   private ObjectId id;
   private String code;
@@ -31,7 +31,7 @@ public class Bug {
   private LocalDateTime dateResolved;
   private LocalDateTime dateClosed;
   private BugType type;
-  private BugStatus status = BugStatus.OPEN;
+  private BugStatus status = BugStatus.NEW;
   private List<Comment> comments;
   private List<String> workHistory;
   private Set<Path> attachments;
