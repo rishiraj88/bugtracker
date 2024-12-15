@@ -1,6 +1,6 @@
 # Bug Tracker
 A simple bug tracker for QA (Quality Analyst) engineer and Projet Manager, built with:
-- Java SE version 17 (built and tested manually with Java 22 compiler also)
+- Java SE version 17 (built and tested with Java 21 as well)
 - Spring Boot 3.2
 - JUnit 5
 - Testcontainers
@@ -17,10 +17,9 @@ A simple bug tracker for QA (Quality Analyst) engineer and Projet Manager, built
 - (X) Update a bug. Not in plan to implement
 
 ## Developer Notes
-- Development has been done.
-- The following sections will be updated during next few days:
-  - Due to some issues with Java 22 while running Docker container of bug tracker app, the project is currently being recompiled and exported using Java 17 compiler/linker.
-  - to implement and use Docker secrets for enhanced security
+- [X] Development has been done.
+- [] To implement and use Docker secrets for enhanced security.
+- [Continuous Improvement] Fix bugs and errors.
 
 ## Testing
 

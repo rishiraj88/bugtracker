@@ -17,7 +17,7 @@ import rrpay.bug.service.BugService;
 import java.util.List;
 import static rrpay.bug.util.EntityToDtoMapper.entityToDto;
 @RestController
-@RequestMapping("/bugs")
+@RequestMapping("/bugs/api/v2")
 @RequiredArgsConstructor
 public class BugController {
     /* @RequiredArgsConstructor annotation takes care of autowiring by constructor
