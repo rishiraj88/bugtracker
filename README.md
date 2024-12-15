@@ -18,7 +18,8 @@ A simple bug tracker for QA (Quality Analyst) engineer and Projet Manager, built
 
 ## Developer Notes
 - [X] Development has been done.
-- [ ] To implement and use Docker secrets for enhanced security.
+- [] To implement and use Docker secrets for enhanced security.
+- [Continuous Improvement] Fix bugs and errors.
 
 ## Testing
 
