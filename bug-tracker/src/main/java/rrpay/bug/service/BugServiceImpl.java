@@ -2,13 +2,13 @@ package rrpay.bug.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import rrpay.bug.dto.BugDTO;
-import rrpay.bug.kt.model.Bug;
+import rrpay.bug.dto.BugDto;
+import rrpay.bug.model.Bug;
 import rrpay.bug.repo.BugRepository;
 import static rrpay.bug.util.EntityToDtoMapper.*;
 import java.util.List;
 
-//@Service
+@Service
 @RequiredArgsConstructor
 public class BugServiceImpl implements BugService {
     // @RequiredArgsConstructor annotation takes care of autowiring by constructor
@@ -16,22 +16,22 @@ public class BugServiceImpl implements BugService {
     private final BugRepository bugRepository;
 
     @Override
-    public List<BugDTO> getBugs() {
+    public List<BugDto> getBugs() {
         List<Bug> bugs = bugRepository.findAll();
         return bugs.stream().map(bug-> entityToDto(bug)).toList(); // Stream.toList() available in Java SE 17
     }
 
     @Override
-    public Bug createBug(BugDTO bugDTO) {
-        return bugRepository.save(dtoToEntity(bugDTO));
+    public Bug createBug(BugDto bugDto) {
+        return bugRepository.save(dtoToEntity(bugDto));
     }
 
     @Override
-    public List<BugDTO> getBugsByCode(String code) {
+    public List<BugDto> getBugsByCode(String code) {
         return bugRepository.findByCode(code).stream().map(bug ->entityToDto(bug)).toList();
     }
     @Override
-    public BugDTO getOneBugByCode(String code) {
+    public BugDto getOneBugByCode(String code) {
         List<Bug> bugList = bugRepository.findByCode(code);
         if(null == bugList || bugList.isEmpty()){
             return null;

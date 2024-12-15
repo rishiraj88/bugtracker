@@ -3,15 +3,13 @@ package rrpay.bug;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
-import rrpay.bug.dto.BugDTO;
-import rrpay.bug.kt.model.Bug;
+import rrpay.bug.dto.BugDto;
+import rrpay.bug.model.Bug;
 import rrpay.bug.repo.BugRepository;
 import rrpay.bug.service.BugService;
-import rrpay.bug.service.BugServiceImpl;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
 @SpringBootTest
@@ -27,7 +25,7 @@ public class BugTrackerServiceTest {
         Bug bug = new Bug();
         bug.setCode("INVOICEPAY-001");
         when(bugRepository.save(bug)).thenReturn(bug);
-        assertEquals("INVOICEPAY-001", bugService.createBug(new BugDTO()).getCode());
+        assertEquals("INVOICEPAY-001", bugService.createBug(new BugDto()).getCode());
     }
 /*
 

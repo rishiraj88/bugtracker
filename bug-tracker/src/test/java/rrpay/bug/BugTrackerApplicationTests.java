@@ -46,7 +46,7 @@ class BugTrackerApplicationTests {
 				.given()
 					.contentType("application/json").body(requestBody)
 				.when()
-					.post("/bugs/")
+					.post("/bugs/api/v2/")
 				.then()
 					.log().all().statusCode(201)
 					.body("code", Matchers.equalTo("INSTALMENTPAY-001"))

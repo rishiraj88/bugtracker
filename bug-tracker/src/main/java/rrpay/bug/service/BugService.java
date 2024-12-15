@@ -1,18 +1,18 @@
 package rrpay.bug.service;
 
-import rrpay.bug.dto.BugDTO;
-import rrpay.bug.kt.model.Bug;
+import rrpay.bug.dto.BugDto;
+import rrpay.bug.model.Bug;
 
 import java.util.List;
 
 public interface BugService {
-    public List<BugDTO> getBugs();
+    public List<BugDto> getBugs();
 
-    public Bug createBug(BugDTO bug);
+    public Bug createBug(BugDto bug);
 
-    public List<BugDTO> getBugsByCode(String code);
+    public List<BugDto> getBugsByCode(String code);
 
-    public BugDTO getOneBugByCode(String code);
+    public BugDto getOneBugByCode(String code);
 
     public void deleteBug(String code);
 

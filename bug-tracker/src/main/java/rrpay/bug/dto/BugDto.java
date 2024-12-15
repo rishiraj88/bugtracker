@@ -7,34 +7,34 @@ import java.util.Set;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import rrpay.bug.model.kt.enums.BugStatus;
-import rrpay.bug.model.kt.enums.BugType;
-import rrpay.bug.model.kt.enums.Priority;
-import rrpay.bug.model.kt.enums.Role;
+import rrpay.bug.model.enums.BugStatus;
+import rrpay.bug.model.enums.BugType;
+import rrpay.bug.model.enums.Priority;
+import rrpay.bug.model.enums.Role;
 
 @Data
 @NoArgsConstructor
-public class BugDTO {
+public class BugDto {
   private String code;
   private String summary; //user input
   private String description; //user input
   private Priority priority = Priority.NONE;
-  private ProjectDTO projectDTO; //set to default value
-  private UserDTO reporterDTO; //set to default value, later on may be auto-assigned from Principal (SSO)
-  private UserDTO assigneeDTO; //set to default value
+  private ProjectDto projectDto; //set to default value
+  private UserDto reporterDto; //set to default value, later on may be auto-assigned from Principal (SSO)
+  private UserDto assigneeDto; //set to default value
   private LocalDateTime dateCreated; //set to current time
   private LocalDateTime dateResolved;
   private LocalDateTime dateClosed;
   private BugType type; //set to default value
   private BugStatus status = BugStatus.NEW; //default value
-  private List<CommentDTO> commentDTOs;
+  private List<CommentDto> commentDtos;
   private List<String> workHistory;
   private Set<Path> attachments;
 
   {
-    projectDTO = new ProjectDTO(null,null);
-    reporterDTO = new UserDTO("rraj", Role.REPORTER);
-    assigneeDTO = new UserDTO("mbibo",Role.DEVELOPER);
+    projectDto = new ProjectDto(null,null);
+    reporterDto = new UserDto("rraj", Role.REPORTER);
+    assigneeDto = new UserDto("mbibo",Role.DEVELOPER);
     dateCreated = LocalDateTime.now();
     type = BugType.SOFTWARE_BUG;
   }
