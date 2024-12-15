@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
-import rrpay.bug.model.kt.enums.Role;
+import rrpay.bug.model.enums.Role;
 import rrpay.bug.util.ProjectMap;
 
 import java.util.Set;
