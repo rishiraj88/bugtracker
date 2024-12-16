@@ -1,5 +1,5 @@
 # Bug Tracker
-A simple bug tracker for QA (Quality Analyst) engineer and Projet Manager, built with:
+A simple bug tracker for QA (Quality Analyst) engineer and Project Manager, built with:
 - Java SE version 17 (built and tested with Java 21 as well)
 - Spring Boot 3.2
 - JUnit 5
