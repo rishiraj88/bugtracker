@@ -7,7 +7,7 @@ import rrpay.bug.model.Bug;
 import rrpay.bug.model.Project;
 import rrpay.bug.model.User;
 
-public class EntityToDtoMapper {
+public class EntityDtoMapper {
     public static Bug dtoToEntity(BugDto dto) {
         Bug entity = new Bug(dto.getSummary(),dto.getDescription(),dto.getPriority(),dto.getStatus());
         entity.setCode(dto.getCode());

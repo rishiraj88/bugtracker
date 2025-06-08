@@ -18,5 +18,5 @@ public interface BugService {
 
     public void deleteAllBugs();
 
-    public String updateBugDescription(String code, String description);
+    public void updateBugDescription(String code, String description);
 }

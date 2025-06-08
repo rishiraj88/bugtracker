@@ -6,9 +6,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
 @NoArgsConstructor
-@Document(collection="comment")
+@Document(collection = "comment")
 public class Comment {
-  private String text;
-  private User author;
-
+    private String text;
+    private User author;
 }

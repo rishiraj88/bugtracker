@@ -3,10 +3,14 @@ package rrpay.bug.service;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import rrpay.bug.dto.BugDto;
+import rrpay.bug.exception.BugsNotFoundException;
 import rrpay.bug.model.Bug;
 import rrpay.bug.repo.BugRepository;
-import static rrpay.bug.util.EntityToDtoMapper.*;
+
 import java.util.List;
+
+import static rrpay.bug.util.EntityDtoMapper.dtoToEntity;
+import static rrpay.bug.util.EntityDtoMapper.entityToDto;
 
 @Service
 @RequiredArgsConstructor
@@ -18,7 +22,10 @@ public class BugServiceImpl implements BugService {
     @Override
     public List<BugDto> getBugs() {
         List<Bug> bugs = bugRepository.findAll();
-        return bugs.stream().map(bug-> entityToDto(bug)).toList(); // Stream.toList() available in Java SE 17
+        if (bugs.isEmpty()) {
+            throw new BugsNotFoundException();
+        }
+        return bugs.stream().map(bug -> entityToDto(bug)).toList(); // Stream.toList() available in Java SE 17
     }
 
     @Override
@@ -28,18 +35,28 @@ public class BugServiceImpl implements BugService {
 
     @Override
     public List<BugDto> getBugsByCode(String code) {
-        return bugRepository.findByCode(code).stream().map(bug ->entityToDto(bug)).toList();
+        List<Bug> bugs = bugRepository.findByCode(code);
+        if (bugs.isEmpty()) {
+            throw new BugsNotFoundException(code);
+        }
+        return bugs.stream().map(bug -> entityToDto(bug)).toList();
     }
+
     @Override
     public BugDto getOneBugByCode(String code) {
         List<Bug> bugList = bugRepository.findByCode(code);
-        if(null == bugList || bugList.isEmpty()){
-            return null;
+        if (bugList.isEmpty()) {
+            throw new BugsNotFoundException(code);
         }
         return entityToDto(bugList.get(0));
     }
+
     @Override
     public void deleteBug(String code) {
+        List<Bug> bugList = bugRepository.findByCode(code);
+        if (bugList.isEmpty()) {
+            throw new BugsNotFoundException(code);
+        }
         bugRepository.deleteByCode(code);
     }
 
@@ -49,14 +66,12 @@ public class BugServiceImpl implements BugService {
     }
 
     @Override
-    public String updateBugDescription(String code, String description) {
+    public void updateBugDescription(String code, String description) {
         List<Bug> bugList = bugRepository.findByCode(code);
-        if(null == bugList || bugList.isEmpty()){
-            return "Update not done for reason: No matching bug found.";
+        if (bugList.isEmpty()) {
+            throw new BugsNotFoundException(code);
         }
-        Bug bug = bugList.get(0);
-        bug.setDescription(description);
-        bugRepository.save(bug);
-        return "The description of the matching bug has been updated.";
+        bugList.stream().forEach(b -> b.setDescription(description));
+        bugRepository.saveAll(bugList);
     }
 }

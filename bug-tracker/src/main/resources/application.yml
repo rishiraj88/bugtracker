@@ -1,5 +1,5 @@
 server:
-  port: 9002
+  port: 9090
 
 spring:
   application:
@@ -9,7 +9,7 @@ spring:
       #host: localhost # for running bug-tracker app without its container
       host: localhost
       port: 27017
-      database: mongo
+      database: bugsdb
       authentication-database: admin
       username: admin
-      password: pass
+      password: ${DB_PASSWORD}
