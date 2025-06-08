@@ -7,9 +7,7 @@ import rrpay.bug.model.Bug;
 import java.util.List;
 
 @Repository
-public interface BugRepository extends MongoRepository<Bug,String> {
+public interface BugRepository extends MongoRepository<Bug, String> {
     List<Bug> findByCode(String code);
-
-     void deleteByCode(String code);
-
-             }
+    void deleteByCode(String code);
+}

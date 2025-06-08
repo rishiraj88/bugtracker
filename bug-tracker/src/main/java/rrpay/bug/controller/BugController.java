@@ -15,7 +15,9 @@ import rrpay.bug.dto.BugDto;
 import rrpay.bug.service.BugService;
 
 import java.util.List;
-import static rrpay.bug.util.EntityToDtoMapper.entityToDto;
+
+import static rrpay.bug.util.EntityDtoMapper.entityToDto;
+
 @RestController
 @RequestMapping("/bugs/api/v2")
 @RequiredArgsConstructor
@@ -28,11 +30,7 @@ public class BugController {
 
     @GetMapping("/")
     public ResponseEntity<List<BugDto>> getBugs() {
-        List<BugDto> bugs = bugService.getBugs();
-        if (null == bugs || bugs.isEmpty()) {
-            return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
-        }
-        return new ResponseEntity<>(bugs, HttpStatus.OK);
+        return new ResponseEntity<>(bugService.getBugs(), HttpStatus.OK);
     }
 
     @PostMapping("/")
@@ -43,10 +41,7 @@ public class BugController {
 
     @GetMapping("/{code}")
     public ResponseEntity<BugDto> getOneBugByCode(@PathVariable String code) {
-        BugDto bug =bugService.getOneBugByCode(code);
-        if(null == bug)
-            return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
-        return  new ResponseEntity<>(bug,HttpStatus.OK);
+        return new ResponseEntity<>(bugService.getOneBugByCode(code), HttpStatus.OK);
     }
 
     @DeleteMapping("/{code}")
@@ -56,14 +51,14 @@ public class BugController {
     }
 
     @DeleteMapping("/")
-    public ResponseEntity<Void> deleteAllBugs(){
+    public ResponseEntity<Void> deleteAllBugs() {
         bugService.deleteAllBugs();
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 
     @PatchMapping("/{code}")
-    public ResponseEntity<String> updateBugDescription(@PathVariable String code, @RequestBody String description){
-        String serviceResponse = bugService.updateBugDescription(code,description);
-        return ResponseEntity.status(HttpStatus.OK).body(serviceResponse);
+    public ResponseEntity<String> updateBugDescription(@PathVariable String code, @RequestBody String description) {
+        bugService.updateBugDescription(code, description);
+        return ResponseEntity.status(HttpStatus.OK).body("The descriptions of the matching bugs have been updated.");
     }
 }

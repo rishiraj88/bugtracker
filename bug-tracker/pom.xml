@@ -14,8 +14,7 @@
     <name>bug-tracker</name>
     <description>bug tracker for internal use with confidential projects at RRPay</description>
     <properties>
-        <java.version>17</java.version>
-        <kotlin.version>1.9.0</kotlin.version>
+        <java.version>24</java.version>
     </properties>
     <dependencies>
         <dependency>
