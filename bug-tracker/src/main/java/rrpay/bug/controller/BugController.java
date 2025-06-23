@@ -35,7 +35,7 @@ public class BugController {
 
     @PostMapping("/")
     public ResponseEntity<BugDto> createBug(@RequestBody BugDto bugRequest) {
-        BugDto bug = entityToDto(bugService.createBug(bugRequest));
+        BugDto bug = bugService.createBug(bugRequest);
         return ResponseEntity.status(HttpStatus.CREATED).body(bug);
     }
 
