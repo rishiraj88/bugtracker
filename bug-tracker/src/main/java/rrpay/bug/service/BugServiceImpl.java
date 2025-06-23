@@ -29,8 +29,8 @@ public class BugServiceImpl implements BugService {
     }
 
     @Override
-    public Bug createBug(BugDto bugDto) {
-        return bugRepository.save(dtoToEntity(bugDto));
+    public BugDto createBug(BugDto bugDto) {
+        return entityToDto(bugRepository.save(dtoToEntity(bugDto)));
     }
 
     @Override

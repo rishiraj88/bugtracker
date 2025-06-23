@@ -1,14 +1,13 @@
 package rrpay.bug.service;
 
 import rrpay.bug.dto.BugDto;
-import rrpay.bug.model.Bug;
 
 import java.util.List;
 
 public interface BugService {
     public List<BugDto> getBugs();
 
-    public Bug createBug(BugDto bug);
+    public BugDto createBug(BugDto bug);
 
     public List<BugDto> getBugsByCode(String code);
 
