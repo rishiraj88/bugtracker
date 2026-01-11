@@ -6,7 +6,7 @@ spring:
     name: bug-tracker
   data:
     mongodb:
-      #host: localhost # for running bug-tracker app without its container
+      #host: localhost # for running bug-tracker app without its container (podman or Docker)
       host: localhost
       port: 27017
       database: bugsdb

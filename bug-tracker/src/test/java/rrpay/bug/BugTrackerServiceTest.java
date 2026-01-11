@@ -27,9 +27,8 @@ public class BugTrackerServiceTest {
         when(bugRepository.save(bug)).thenReturn(bug);
         assertEquals("INVOICEPAY-001", bugService.createBug(new BugDto()).getCode());
     }
+
 /*
-
-
 	@Test
 	public void deleteBug() {
 		String code = "INVOICEPAY-001";
@@ -70,6 +69,5 @@ public class BugTrackerServiceTest {
 
 		assertEquals(description, bugService.updateBugDescription(code,description).getDescription());
 	}
-
 */
 }

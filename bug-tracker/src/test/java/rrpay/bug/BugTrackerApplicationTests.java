@@ -58,5 +58,4 @@ class BugTrackerApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }

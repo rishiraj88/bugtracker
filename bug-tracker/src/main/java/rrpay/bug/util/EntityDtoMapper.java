@@ -41,7 +41,6 @@ public class EntityDtoMapper {
     }
     public static ProjectDto entityToDto(Project entity) {
         ProjectDto dto = new ProjectDto(entity.getName(),entity.getDescription());
-
         return dto;
     }
     public static User dtoToEntity(UserDto dto) {
@@ -53,6 +52,5 @@ public class EntityDtoMapper {
     public static UserDto entityToDto(User entity) {
         UserDto dto = new UserDto(entity.getLoginName(),entity.getRole());
         return dto;
-
     }
 }
