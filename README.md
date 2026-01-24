@@ -1,7 +1,7 @@
 # Bug Tracker (Java Implementation)
 A simple bug tracker for QA (Quality Analyst) engineer and Project Manager, built with:
-- Java SE version 17 (built and tested with Java 21 as well)
-- Spring Boot 3.2
+- Java SE version 21
+- Spring Boot
 - JUnit 5
 - Testcontainers
 - Rest-Assured
@@ -14,7 +14,7 @@ A simple bug tracker for QA (Quality Analyst) engineer and Project Manager, buil
 - List all bugs
 - Delete a bug, by code
 - Delete all bugs
-- (X) Update a bug. Not in plan to implement
+- (X) Update a bug. Not in plan to implement soon
 
 ## Developer Notes
 - [X] Development has been done.
